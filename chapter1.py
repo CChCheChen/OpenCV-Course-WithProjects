@@ -30,16 +30,17 @@ print("Package Imported")
 capture = cv.VideoCapture(0) # for default web-cam
 capture.set(3, 630)
 capture.set(4, 480)
+capture.set(10, 100)
 
 while True:
     success, frame = capture.read()
 
     if success:
         cv.imshow('Monday', frame)
-        if cv.waitKey(20) & 0xFF == ord('d'):  # close window when 'd' is pressed on keyboard
+        if cv.waitKey(20) & 0xFF == ord('d'):  # close window whend 'd' is pressed on keyboard
             break
     else:
         break
 
 capture.release()
-# cv.destroyAllWindows()
+cv.destroyAllWindows()
