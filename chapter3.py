@@ -1,7 +1,4 @@
 import cv2 as cv
-import numpy as np
-
-# kernel = np.ones((5, 5), np.uint8)
 
 img = cv.imread("Resources/fred.png")
 cv.imshow("Fred", img)
