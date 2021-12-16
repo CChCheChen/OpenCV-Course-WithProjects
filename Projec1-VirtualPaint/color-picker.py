@@ -7,10 +7,8 @@ cap = cv.VideoCapture(0)
 cap.set(3, frameWidth)
 cap.set(4, frameHeight)
 
-
 def empty(a):
     pass
-
 
 cv.namedWindow("HSV")
 cv.resizeWindow("HSV", 640, 240)
@@ -22,7 +20,6 @@ cv.createTrackbar("VALUE Min", "HSV", 0, 255, empty)
 cv.createTrackbar("VALUE Max", "HSV", 255, 255, empty)
 
 while True:
-
     success, img = cap.read()
     imgHsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
 
